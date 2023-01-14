@@ -5,5 +5,5 @@ export enum TelegramCSS {
   HINT_COLOR = 'var(--tg-theme-hint-color)',
   LINK_COLOR = 'var(--tg-theme-link-color)',
   BUTTON_COLOR = 'var(--tg-theme-button-color)',
-  BUTTON_TEXT_COLOR = 'var(--tg-theme-button-text-color)',
+  BUTTON_TEXT_COLOR = 'var(--tg-theme-button-text-color)'
 }

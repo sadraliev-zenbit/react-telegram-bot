@@ -1,5 +1,5 @@
-import { TelegramCSS } from "@common/telegram.styles";
-import * as React from "react";
+import { TelegramCSS } from '@common/telegram.styles';
+import * as React from 'react';
 
 interface IWelcomeProps {
   text: string;

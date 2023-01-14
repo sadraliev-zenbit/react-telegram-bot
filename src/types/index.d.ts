@@ -6,7 +6,7 @@ export declare namespace TelegramWebApps {
   /**
    * Available app events.
    */
-  type EventType = "themeChanged" | "viewportChanged" | "mainButtonClicked";
+  type EventType = 'themeChanged' | 'viewportChanged' | 'mainButtonClicked';
 
   interface WebApp {
     /**
@@ -24,7 +24,7 @@ export declare namespace TelegramWebApps {
      * The color scheme currently used in the Telegram app. Either “light” or “dark”.
      * Also available as the CSS variable var(--tg-color-scheme).
      */
-    colorScheme: "light" | "dark";
+    colorScheme: 'light' | 'dark';
     /**
      * An object containing the current theme settings used in the Telegram app.
      */
@@ -49,11 +49,11 @@ export declare namespace TelegramWebApps {
     /**
      * A method that sets the app event handler.
      */
-    onEvent: (eventType: EventType, eventHandler: Function) => void;
+    onEvent: (eventType: EventType, eventHandler: () => void) => void;
     /**
      * 	A method that deletes a previously set event handler.
      */
-    offEvent: (eventType: EventType, eventHandler: Function) => void;
+    offEvent: (eventType: EventType, eventHandler: () => void) => void;
     /**
      * A method used to send data to the bot.
      */
@@ -195,7 +195,7 @@ export declare namespace TelegramWebApps {
     /**
      * A method that sets the button press event handler. An alias for Telegram.WebApp.onEvent('mainButtonClicked', callback)
      */
-    onClick: (callback: Function) => MainButton;
+    onClick: (callback: () => void) => MainButton;
     /**
      * A method to make the button visible.
      */
