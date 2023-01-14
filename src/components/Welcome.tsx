@@ -6,7 +6,11 @@ interface IWelcomeProps {
 }
 
 const Welcome: React.FunctionComponent<IWelcomeProps> = ({ text }) => {
-  return <h1 style={{ color: TelegramCSS.TEXT_COLOR }}>{text}</h1>;
+  return (
+    <div>
+      <h1 style={{ color: TelegramCSS.TEXT_COLOR }}>{text}</h1>
+    </div>
+  );
 };
 
 export default Welcome;

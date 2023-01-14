@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Alert from '@components/Welcome';
+import { TelegramProvider } from '@common/telegram.context';
 
 function App() {
-  const tg = window?.Telegram?.WebApp;
   return (
-    <div className="App">
-      <Alert text={'hello world!'} />
-    </div>
+    <TelegramProvider>
+      <div className="App">
+        <Alert text={'Welcome!'} />
+      </div>
+    </TelegramProvider>
   );
 }
 
